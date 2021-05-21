@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Il labirinto pluviale</title>
+	<link rel="stylesheet" href="https://use.typekit.net/iqa0jfx.css">
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		#myVideo {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+			background-image: cover;
+		}
+		pre {
+			font-family: itc-benguiat-condensed, sans-serif;
+			font-size:12.5vw;
+			text-align: center;
+			font-weight: 400;
+			display:relative;
+			word-wrap: break-word;
+			white-space: pre-wrap;
+			margin: 0px;
+			padding: 0px;
+			margin-top: -1.2em;
+    
+		}
+		.invisibile {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<a href="header.html" style="color: white;">
+		<video autoplay muted loop id="myVideo">
+			<source src="video/video.mp4" type="video/mp4">
+		</video>
+
+		<div class ="primaPagina">
+			<pre id="input" class="invisibile">
+				Il labirinto pluviale</pre>
+				<pre id="output"></pre>
+				<p style="text-align: center;  font-size: 2vw; opacity: 30%;  position: absolute;
+				left: 45vw; top: 110vh">
+					<br>Danijel Cancar CV2
+				</p>
+
+	<script type="text/javascript">
+		let testo = document.querySelector('#input').innerText
+
+		let out = document.querySelector('#output')
+		let indice = 0
+		function aggiungiTesto() {
+			out.innerText += testo[indice]
+			indice = indice + 1
+			if (indice < testo.length) {
+				let pausa = 105//Math.floor(Math.random() * 3) * 60 + 30
+				setTimeout(aggiungiTesto, pausa)
+			}
+		}
+		aggiungiTesto()
+	</script>
+
+			
+		
+			
+		</div>
+</a>
+
+
+		
+	
+		
+			
+				
+</body>
+</html>
