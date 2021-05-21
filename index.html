@@ -24,8 +24,8 @@
 			margin: 0px;
 			padding: 0px;
 			margin-top: -1.2em;
-    
 		}
+		
 		.invisibile {
 			display: none;
 		}
@@ -46,26 +46,23 @@
 					<br>Danijel Cancar CV2
 				</p>
 
-	<script type="text/javascript">
-		let testo = document.querySelector('#input').innerText
+		<script type="text/javascript">
+			let testo = document.querySelector('#input').innerText
 
-		let out = document.querySelector('#output')
-		let indice = 0
-		function aggiungiTesto() {
-			out.innerText += testo[indice]
-			indice = indice + 1
-			if (indice < testo.length) {
-				let pausa = 105//Math.floor(Math.random() * 3) * 60 + 30
-				setTimeout(aggiungiTesto, pausa)
+			let out = document.querySelector('#output')
+			let indice = 0
+			function aggiungiTesto() {
+				out.innerText += testo[indice]
+				indice = indice + 1
+				if (indice < testo.length) {
+					let pausa = 105//Math.floor(Math.random() * 3) * 60 + 30
+					setTimeout(aggiungiTesto, pausa)
+				}
 			}
-		}
-		aggiungiTesto()
-	</script>
-
-			
+			aggiungiTesto()
+		</script>
 		
-			
-		</div>
+	</div>
 </a>
 				
 </body>
